@@ -7,7 +7,7 @@ app=FastAPI()
 class UserOut(BaseModel):
     result: str
 
-@app.post("/face",respnsemodel=UserOut)
+@app.post("/face",responses=UserOut)
 async def face(file:UploadFile):
     name="1"
     content=await file.read()
